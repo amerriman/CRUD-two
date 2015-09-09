@@ -6,9 +6,35 @@
 {% block content %}
 
   <div class="container">
+  <h2>Student Roster</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Student Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Student Name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" placeholder="Age" name="age" required>
+      </div>
+      <div class="form-group">
+        <label for="homeroom">Homeroom Teacher</label>
+        <input type="text" class="form-control" id="homeroom"placeholder="Homeroom Teacher" name="homeroom" required>
+      </div>
+      <button type="submit" class="btn btn-default">Save Student</button>
+    </form>
 
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+    <br>
+    <p id="message"></p>
+
+    <table class="table table-striped">
+      <thead>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Homeroom</th>
+      </thead>
+      <tbody id="student-list">
+      </tbody>
+    </table>
 
   </div>
 
