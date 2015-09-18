@@ -40,7 +40,7 @@ router.post('/students', function(req, res){
     if (err) {
       res.json({'message': err});
     } else {
-      res.json(data);
+      res.json({'SUCCESS': data});
     }
   });
 });
